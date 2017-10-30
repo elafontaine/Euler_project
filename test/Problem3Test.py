@@ -1,22 +1,8 @@
+from Problem3 import is_prime, find_all_prime_factors
+
 __author__ = 'erlafont'
 
 import unittest
-import math
-
-
-def is_prime(number):
-    for index in range(2,math.ceil(math.sqrt(number))+1):
-        if number % index == 0 and number != index:
-            return False
-    return True
-
-
-def find_all_prime_factors(number):
-    list_of_primes = []
-    for index in range(2,math.ceil(math.sqrt(number))+1):
-        if is_prime(index) and number % index == 0 and number != index:
-            list_of_primes.append(index)
-    return list_of_primes
 
 
 class Problem3Test(unittest.TestCase):
@@ -48,10 +34,10 @@ class Problem3Test(unittest.TestCase):
         assert find_all_prime_factors(2) == []
         assert find_all_prime_factors(3) == []
         assert find_all_prime_factors(4) == [2]
-        assert find_all_prime_factors(6) == [2,3]
+        assert find_all_prime_factors(6) == [2, 3]
         assert find_all_prime_factors(7) == []
 #        assert find_all_prime_factors(600851475143)
-        assert find_all_prime_factors(13195) == [5,7,13,29]
+        assert find_all_prime_factors(13195) == [5, 7, 13, 29]
         
 
 if __name__ == '__main__':
