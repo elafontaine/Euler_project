@@ -11,6 +11,7 @@ class Problem5Test(unittest.TestCase):
 
     def test_find_lowest_multiple(self):
         assert 2520 == find_lowest_multiple(10)
+        assert 232792560 == find_lowest_multiple(20)
 
 if __name__ == '__main__':
     print(__file__, " is main!")

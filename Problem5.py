@@ -2,10 +2,7 @@ from Problem3 import is_prime
 
 __author__ = 'erlafont'
 
-if __name__ == '__main__':
-    print(__file__, " is main!")
-else:
-    print(__file__, " is loaded!")
+
 
 
 def find_lowest_multiple(highest_divisor):
@@ -25,3 +22,8 @@ def is_divisible_by_all_number_under(highest_divisor, number):
         if number % index != 0:
             return False
     return True
+if __name__ == '__main__':
+    print(__file__, " is main!")
+    print(find_lowest_multiple(20))
+else:
+    print(__file__, " is loaded!")
